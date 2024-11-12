@@ -1,9 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using BuberBreakfast.Contracts.Breakfast;
-using BuberBreakfast.Models;
-using BuberBreakfast.Services.Breakfast;
 using ErrorOr;
-using BuberBreakfast.ServiceError;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace BuberBreakfast.Controllers;
 
@@ -24,7 +20,7 @@ public class ApiController : ControllerBase
             }
             return ValidationProblem();
         }
-        
+
         if(errors.Any(e=>e.Type == ErrorType.Unexpected)){
             return Problem();
         }

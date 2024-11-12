@@ -3,7 +3,6 @@ using BuberBreakfast.Contracts.Breakfast;
 using BuberBreakfast.Models;
 using BuberBreakfast.Services.Breakfast;
 using ErrorOr;
-using BuberBreakfast.ServiceError;
 namespace BuberBreakfast.Controllers;
 
 [ApiController]

@@ -24,5 +24,6 @@ Global
 		{A59A02E4-C93F-4832-80FF-043ABCE66801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A59A02E4-C93F-4832-80FF-043ABCE66801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A59A02E4-C93F-4832-80FF-043ABCE66801}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 EndGlobal
