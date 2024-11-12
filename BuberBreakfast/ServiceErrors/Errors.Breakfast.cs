@@ -8,5 +8,13 @@ public static class Errors{
             "Breakfast.NotFound",
             "Breakfast not found."
         );
+        public static Error InvalidName => Error.NotFound(
+            "Breakfast.InvalidName",
+            $"The breakfast name length should be between {Models.Breakfast.MinNameLength} and {Models.Breakfast.MaxNameLength} characters."
+        );
+        public static Error InvalidDescription => Error.NotFound(
+            "Breakfast.InvalidName",
+            $"The breakfast name length should be between {Models.Breakfast.MinDescriptionLength} and {Models.Breakfast.MaxDescriptionLength} characters."
+        );
     }
 }
