@@ -1,9 +1,7 @@
 using BuberBreakfast.Contracts.Authentication;
+using BuberBreakfast.Models;
 
 public record AuthenticationResult(
-    Guid Id,
-    string FirstName,
-    string LastName,
-    string Email,
+    User user,
     string Token
 );

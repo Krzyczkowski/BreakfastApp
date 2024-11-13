@@ -19,10 +19,10 @@ public class AuthenticationController :ApiController{
         var authResult = _authenticationService.Register(request);
 
         var response = new AuthenticationResponse(
-            Guid.NewGuid(),
-            request.FirstName,
-            request.LastName,
-            request.Email,
+            authResult.user.Id,
+            authResult.user.FirstName,
+            authResult.user.LastName,
+            authResult.user.Email,
             authResult.Token
         );
 
@@ -33,11 +33,11 @@ public class AuthenticationController :ApiController{
     public IActionResult Login(LoginRequest request){
         var authResult = _authenticationService.Login(request);
         var response = new AuthenticationResponse(
-            Guid.NewGuid(),
-            "fname",
-            "lname",
-            request.Email,
-            "token"
+            authResult.user.Id,
+            authResult.user.FirstName,
+            authResult.user.LastName,
+            authResult.user.Email,
+            authResult.Token
         );
         return Ok(response);
     }
