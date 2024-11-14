@@ -1,9 +1,12 @@
 using BuberBreakfast.Authentication;
 using BuberBreakfast.Common.Interfaces.Authentication;
 using BuberBreakfast.Interfaces.Persistance;
+using BuberBreakfast.Interfaces.Persistence;
 using BuberBreakfast.Persistance;
+using BuberBreakfast.Persistance.Repository;
 using BuberBreakfast.Services.Authentication;
 using BuberBreakfast.Services.Breakfast;
+using Microsoft.EntityFrameworkCore;
 
 ConfigurationManager configurationManager = new();
 configurationManager.SetBasePath(Directory.GetCurrentDirectory());
@@ -18,8 +21,10 @@ builder.Services.AddScoped<IBreakfastService, BreakfastService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IUserRepository, InMemoryUserRepository>();
+builder.Services.AddScoped<IBreakfastRepository, SqlBreakfastRepository>();
 builder.Services.Configure<JwtSettings>(configurationManager.GetSection("JwtSettings"));
-
+builder.Services.AddDbContext<BuberBreakfastDbContext>(options =>
+    options.UseSqlite("Data Source=BuberBreakfast.db"));
 var app = builder.Build();
 
 // Konfiguracja aplikacji

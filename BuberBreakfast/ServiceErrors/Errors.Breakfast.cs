@@ -14,7 +14,11 @@ public static class Errors{
         );
         public static Error InvalidDescription => Error.NotFound(
             "Breakfast.InvalidName",
-            $"The breakfast name length should be between {Models.Breakfast.MinDescriptionLength} and {Models.Breakfast.MaxDescriptionLength} characters."
+            $"The breakfast description length should be between {Models.Breakfast.MinDescriptionLength} and {Models.Breakfast.MaxDescriptionLength} characters."
+        );
+        public static Error CreationFailed => Error.NotFound(
+            "Breakfast.CreationFailed",
+            $"The breakfast creation failed."
         );
     }
 }

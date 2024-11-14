@@ -1,9 +1,9 @@
-PUT http://localhost:5073/breakfasts/eea72269-a0f0-4635-b396-eff148993251
+PUT http://localhost:5073/breakfasts/9FC20D94-3A07-4057-86AF-B534453F820B
 Content-Type: application/json
 
 {
     "name": "Vegan2 Sunshine",
-    "description": "Vegan everything! Join us for a healthy breakfast..",
+    "description": "Vegan everything! Join us for a breakfast",
     "startDateTime": "2022-04-08T08:00:00",
     "endDateTime": "2022-04-08T11:00:00",
     "lastModifiedDateTime": "2022-04-06T12:00:00",

@@ -94,8 +94,8 @@ public class BreakfastController : ApiController{
             breakfast.StartDateTime,
             breakfast.EndDateTime,
             breakfast.LastModifiedDateTime,
-            breakfast.Savory,
-            breakfast.Sweet
+            breakfast.Savory.ToList(),
+            breakfast.Sweet.ToList()
         );
     }
 
