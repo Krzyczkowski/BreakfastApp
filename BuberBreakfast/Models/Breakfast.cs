@@ -9,7 +9,6 @@ public class Breakfast
     public const int MaxNameLength = 30;
     public const int MinDescriptionLength = 5;
     public const int MaxDescriptionLength = 50;
-
     public Guid Id { get; set; } 
     public string Name { get; set; } 
     public string Description { get; set; }

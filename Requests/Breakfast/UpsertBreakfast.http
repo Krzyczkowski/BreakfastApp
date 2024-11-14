@@ -1,4 +1,4 @@
-PUT http://localhost:5073/breakfasts/9FC20D94-3A07-4057-86AF-B534453F820B
+PUT http://localhost:5073/breakfasts/9FC20D94-3A07-4057-86AF-B534453F8201
 Content-Type: application/json
 
 {

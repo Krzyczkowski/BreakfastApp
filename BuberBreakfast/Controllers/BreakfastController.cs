@@ -3,10 +3,12 @@ using BuberBreakfast.Contracts.Breakfast;
 using BuberBreakfast.Models;
 using BuberBreakfast.Services.Breakfast;
 using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 namespace BuberBreakfast.Controllers;
 
 [ApiController]
 [Route("breakfasts")]
+[Authorize]
 public class BreakfastController : ApiController{
 
     private readonly IBreakfastService _breakfastService;
@@ -18,7 +20,7 @@ public class BreakfastController : ApiController{
     [HttpPost("")]
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
-       ErrorOr<Breakfast> breakfastCreateResult =Breakfast.Create(
+       ErrorOr<Breakfast> breakfastCreateResult = Breakfast.Create(
             request.Name,
             request.Description,
             request.StartDateTime,
