@@ -85,8 +85,8 @@ Content-Type: application/json
 
 ## Authorization
 
-For endpoints requiring authorization, include the following HTTP header in your requests:
-Authorization: Bearer <your-token>
+For endpoints requiring authorization like /breakfasts, include the following HTTP header in your requests:  
+``Authorization: Bearer <your-token>``
 
 Replace <your-token> with the token received from the Login response.
 

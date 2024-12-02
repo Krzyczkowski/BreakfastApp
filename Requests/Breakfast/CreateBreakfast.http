@@ -1,5 +1,6 @@
 POST http://localhost:5073/breakfasts
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMjA0YmY1YS04MWFlLTQzOGItOWVkNy05NTMzNWQyZTI1ZDIiLCJqdGkiOiJlNGI3ODdhZi02N2I0LTRhNGYtYTk2ZC1mNzVlZjFmNzk2MDAiLCJnaXZlbl9uYW1lIjoiV2lrdG9yIiwiZmFtaWx5X25hbWUiOiJLcnp5Y3prb3dza2kiLCJhdWQiOiJCdWJiZXJCcmVha2Zhc3QiLCJleHAiOjE3MzMxNjY2NTYsImlzcyI6IkJ1YmJlckJyZWFrZmFzdCJ9.jY2PAdB445Z_ku0hnM_WLV-PWaHvb8_pu1AE_2wXsuc
 
 {
     "name": "Vegan Sunshine",
